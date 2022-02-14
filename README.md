@@ -1,6 +1,7 @@
 # Roman Numerals exercise
 
-- Please timebox yourself to two-hours maximum for this exercise
+- Please timebox yourself to two-hours for this exercise - we want to see code you are proud of, so spend more time if you need (just let us know)
+- Make sure your commits are meaningful and often so we can see your thinking
 - Fork this repository on GitHub, and store your code within your own fork
 - Use either Ruby, Python, Node.js or PHP to program this exercise
 - Use TDD to build a roman numeral generator
