@@ -1,8 +1,9 @@
 # Roman Numerals exercise
 
-- Please timebox yourself to two-hours for this exercise - we want to see code you are proud of, so spend more time if you need (just let us know)
-- Make sure your commits are meaningful and often so we can see your thinking
+- Please timebox yourself to roughly two-hours for this exercise
+- We want to see code you're proud of, so spend more time if needed, but please let us know
 - Fork this repository on GitHub, and store your code within your own fork
+- Ensure your commits are meaningful so we can understand your work process and thinking
 - Use either Ruby, Python, Node.js or PHP to program this exercise
 - Use TDD to build a roman numeral generator
 - Make sure to include sufficient tests to have confidence in your code
@@ -13,6 +14,7 @@
 - The `make test` target should display the test runner output
 - Update and extend this `README.md` file, ensuring it is informative, relevant and helpful
 - All content within this `README.md` file is currently just an example and guide, and can be changed as you see appropriate
+- **Stretch goal:** Setup a GitHub Actions pipeline to automate the running of your tests
 
 ## Required dependencies
 
