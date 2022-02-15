@@ -1,27 +1,45 @@
 # Roman Numerals exercise
 
-- Please timebox yourself to roughly two-hours for this exercise
-- We want to see code you're proud of, so spend more time if needed, but please let us know
-- Fork this repository on GitHub, and store your code within your own fork
-- Ensure your commits are meaningful so we can understand your work process and thinking
-- Use either Ruby, Python, Node.js or PHP to program this exercise
-- Use TDD to build a roman numeral generator
-- Make sure to include sufficient tests to have confidence in your code
-- This exercise should include a `RomanNumerals` class with a `generate` method which takes an integer as a single parameter and which returns a string representation in roman numerals
-- For example, `29` would return `XXIX`
-- You don't need to worry about converting numbers above `1000` for this exercise
-- A `Makefile` must be used for this exercise in order to run tests with `make test`
-- The `make test` target should display the test runner output
-- Update and extend this `README.md` file, ensuring it is informative, relevant and helpful
-- All content within this `README.md` file is currently just an example and guide, and can be changed as you see appropriate
 - **Stretch goal:** Setup a GitHub Actions pipeline to automate the running of your tests
+
+## Method
+
+- we use an approach found here: https://stackoverflow.com/questions/26092510/roman-numerals-in-ruby
+- see also https://ruby-doc.org/core-2.7.3/Numeric.html#method-i-divmod
+
+Using the following constant defined inside the RomanNumerals class
+
+```ruby
+  ROMAN_CHUNKS = {
+    1000 => 'M',
+    900 => 'CM',
+    500 => 'D',
+    400 => 'CD',
+    100 => 'C',
+    90 => 'XC',
+    50 => 'L',
+    40 => 'XL',
+    10 => 'X',
+    9 => 'IX',
+    5 => 'V',
+    4 => 'IV',
+    1 => 'I'
+  }
+```
+
+We apply `reduce` on that hash, and starting with the input integer,
+for each element apply `divmod` of the element's key to it. However
+many whole times the key fits into the integer, we push that many of
+the corresponding numerals onto the output string, then replace the
+input integer with the remainder part to repeat for the next chunk.
 
 ## Required dependencies
 
 In order to run the tests for this exercise, ensure you have the following installed:
 
 - Make
-- List other dependencies here...
+- RSpec
+- Ruby 2.7
 
 ## Setup
 
