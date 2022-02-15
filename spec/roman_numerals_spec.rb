@@ -25,6 +25,12 @@ RSpec.describe RomanNumerals, '.generate' do
     end
   end
 
+  context 'with an input of 29' do
+    it "outputs the string 'XXIX" do
+      expect(RomanNumerals.generate(29)).to eq 'XXIX'
+    end
+  end
+
   context 'with an input of 1983' do
     it "outputs the string 'MCMLXXXIII'" do
       expect(RomanNumerals.generate(1983)).to eq 'MCMLXXXIII'
