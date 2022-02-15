@@ -1,5 +1,5 @@
 all:
-	echo "type 'make test' to run tests"
+	rspec --init
 
 test:
 	bundle exec rspec
