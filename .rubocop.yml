@@ -1,0 +1,117 @@
+# My Prefered Rubocop Config
+
+AllCops:
+  TargetRubyVersion: 2.7
+
+################################################################################
+# Layout
+################################################################################
+
+Layout/LineLength:
+  # To make it possible to copy or click on URIs in the code, we allow lines
+  # containing a URI to be longer than Max.
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+
+
+################################################################################
+# Lint
+################################################################################
+
+# Lint/DuplicateBranch: # (new in 1.3)
+#   Enabled: true
+# Lint/DuplicateRegexpCharacterClassElement: # (new in 1.1)
+#   Enabled: true
+# Lint/EmptyBlock: # (new in 1.1)
+#   Enabled: true
+# Lint/EmptyClass: # (new in 1.3)
+#   Enabled: true
+# Lint/NoReturnInBeginEndBlocks: # (new in 1.2)
+#   Enabled: true
+# Lint/ToEnumArguments: # (new in 1.1)
+#   Enabled: true
+# Lint/UnexpectedBlockArity: # (new in 1.5)
+#   Enabled: true
+# Lint/UnmodifiedReduceAccumulator: # (new in 1.1)
+#   Enabled: true
+
+
+
+################################################################################
+# Naming
+################################################################################
+
+# Method parameters must have names longer than 2 characters
+Naming/MethodParameterName:
+  MinNameLength: 3
+  # Whitelisted names that will not register an offense
+  AllowedNames:
+    - at
+    - io
+    - id
+    - to
+    - x
+    - of
+  # Blacklisted names that will register an offense
+  ForbiddenNames: []
+
+################################################################################
+# Layout
+################################################################################
+
+# Space inside array
+Layout/SpaceInsideArrayLiteralBrackets:
+  EnforcedStyle: compact
+
+# Space before block
+Layout/SpaceBeforeBlockBraces:
+  EnforcedStyle: no_space
+
+# Space inside block
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+  SpaceBeforeBlockParameters: false
+
+# Hash alignment any-style
+Layout/HashAlignment: { Enabled: false }
+
+################################################################################
+# Style
+################################################################################
+
+# Style/ArgumentsForwarding: # (new in 1.1)
+#   Enabled: true
+# Style/CollectionCompact: # (new in 1.2)
+#   Enabled: true
+# Style/DocumentDynamicEvalDefinition: # (new in 1.1)
+#   Enabled: true
+# Style/NegatedIfElseCondition: # (new in 1.2)
+#   Enabled: true
+# Style/NilLambda: # (new in 1.3)
+#   Enabled: true
+# Style/RedundantArgument: # (new in 1.4)
+#   Enabled: true
+# Style/SwapValues: # (new in 1.1)
+#   Enabled: true
+
+Style/Lambda: { Enabled: false }
+
+Style/EmptyCaseCondition: { Enabled: false }
+
+# Allow double-bang for coercion to boolean
+Style/DoubleNegation: { Enabled: false }
+
+# Disable Frozen String Literal Comment
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+Style/ParallelAssignment: { Enabled: false }
+
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+# Disable top level class docs
+Style/Documentation: { Enabled: true }
