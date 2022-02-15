@@ -1,5 +1,5 @@
 all:
-	echo "ok"
+	echo "type 'make test' to run tests"
 
 test:
-	echo "good"
+	bundle exec rspec
