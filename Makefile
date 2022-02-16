@@ -1,7 +1,7 @@
-all:
-	gem install bundler
-	bundle install
+all: .rspec
+
+.rspec:
 	rspec --init
 
-test:
+test: .rspec
 	bundle exec rspec
